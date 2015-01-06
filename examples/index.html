@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Simple localForage-sessionStorageWrapper example</title>
+  </head>
+  <body>
+    <script src="../bower_components/localforage/dist/localforage.js"></script>
+    <script src="../src/localforage-sessionstoragewrapper.js"></script>
+    <script>
+      var sessionStorageWrapper = window.sessionStorageWrapper;
+
+      localforage.defineDriver(sessionStorageWrapper).then(function() {
+        // Forcing sessionStorage here. Feel free to switch to other drivers :)
+        localforage.setDriver(sessionStorageWrapper._driver).then(function() {
+          var key = 'STORE_KEY';
+          var value = 'What we save offline';
+          var UNKNOWN_KEY = 'unknown_key';
+
+          localforage.getItem(key).then(function(readValue) {
+            if (readValue) {
+              console.log(key + ' was already in ' + localforage.driver() + ', with value: ' + readValue);
+            } else {
+              console.log(localforage.driver() + ' did not contain ' + key);
+            }
+
+            localforage.setItem(key, value, function() {
+              console.log('Saved: ' + value);
+
+              localforage.getItem(key, function(err, readValue) {
+                console.log('Read: ', readValue);
+              });
+
+              // Since this key hasn't been set yet, we'll get a null value
+              localforage.getItem(UNKNOWN_KEY, function(err, readValue) {
+                console.log('Result of reading ' + UNKNOWN_KEY, readValue);
+              });
+            });
+          });
+        });
+      });
+    </script>
+
+    <p>
+      Check your console log.
+    </p>
+    <p>
+      Restart your browser or open a new incognito tab, <br />
+      to verify that everything is stored just for a session.
+    </p>
+  </body>
+</html>
