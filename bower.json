@@ -1,6 +1,6 @@
 {
-  "name": "localForage-sessionStorageWrapper",
-  "version": "1.0.0",
+  "name": "localforage-sessionstoragewrapper",
+  "version": "1.0.1",
   "main": [
     "src/localforage-sessionstoragewrapper.js"
   ],

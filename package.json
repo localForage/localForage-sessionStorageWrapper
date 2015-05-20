@@ -1,12 +1,12 @@
 {
-  "name": "localForage-sessionStorageWrapper",
+  "name": "localforage-sessionstoragewrapper",
   "author": "Thodoris Greasidis",
   "description": "A sessionStorage driver for localForage.",
   "keywords": [
     "localforage",
     "sessionstorage"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/thgreasi/localForage-sessionStorageWrapper",
   "repository": {
     "type": "git",
