@@ -10,3 +10,6 @@ A sessionStorage driver for [localForage](https://github.com/mozilla/localForage
 
 # Installation
 `npm i localforage-sessionstoragewrapper`
+
+## Example
+[jsfiddle](https://jsfiddle.net/m8o7t2pd/)
