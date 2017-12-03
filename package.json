@@ -27,6 +27,7 @@
     "grunt-saucelabs": "^5.1.2",
     "grunt-shell": "^0.6.4",
     "load-grunt-tasks": "^0.4.0",
+    "localforage": ">=1.2.1",
     "mocha": "^1.18.2",
     "phantomjs": "^1.9.7-12",
     "uglify-js": "^2.3.x"
@@ -37,7 +38,7 @@
   "bugs": {
     "url": "http://github.com/thgreasi/localForage-sessionStorageWrapper/issues"
   },
-  "dependencies": {
-    "promise": "^5.0.0"
+  "peerDependencies": {
+    "localforage": ">=1.2.1"
   }
 }
