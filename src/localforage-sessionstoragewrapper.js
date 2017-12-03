@@ -54,6 +54,15 @@
         moduleType = ModuleType.EXPORT;
     }
 
+    function _getKeyPrefix(options, defaultConfig) {
+        var keyPrefix = options.name + '/';
+
+        if (options.storeName !== defaultConfig.storeName) {
+            keyPrefix += options.storeName + '/';
+        }
+        return keyPrefix;
+    }
+
     // Config the sessionStorage backend, using options set in the config.
     function _initStorage(options) {
         var self = this;
@@ -64,10 +73,7 @@
             }
         }
 
-        dbInfo.keyPrefix = dbInfo.name + '/';
-        if (dbInfo.storeName !==  self._defaultConfig.storeName) {
-            dbInfo.keyPrefix += dbInfo.storeName + '/';
-        }
+        dbInfo.keyPrefix = _getKeyPrefix(options, self._defaultConfig);
 
         self._dbInfo = dbInfo;
 
