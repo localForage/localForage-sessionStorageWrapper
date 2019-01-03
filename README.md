@@ -7,7 +7,8 @@ A sessionStorage driver for [localForage](https://github.com/mozilla/localForage
 
 # Requirements
 
-* [localForage](https://github.com/mozilla/localForage) v1.2.1+
+* [localForage](https://github.com/mozilla/localForage) v1.5.0+
+  Users of earlier localForage versions (v1.2.1+) should use sessionStorageWrapper v1.2.0.
 
 # Installation
 `npm i localforage-sessionstoragewrapper`
