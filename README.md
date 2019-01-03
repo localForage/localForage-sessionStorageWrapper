@@ -13,5 +13,8 @@ A sessionStorage driver for [localForage](https://github.com/mozilla/localForage
 # Installation
 `npm i localforage-sessionstoragewrapper`
 
+## bower
+Bower support was droppped in v1.3.0, but you can still use v1.2.0 with `bower install localforage-sessionstoragewrapper@1.2`
+
 ## Example
 [jsfiddle](https://jsfiddle.net/m8o7t2pd/)
