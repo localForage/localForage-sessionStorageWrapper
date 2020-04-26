@@ -6,12 +6,16 @@
   "main": "dist/localforage-sessionstoragewrapper.js",
   "jsnext:main": "dist/localforage-sessionstoragewrapper.es6.js",
   "typings": "typings/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "typings"
+  ],
   "scripts": {
     "clean": "rimraf build && rimraf dist",
     "lint": "tslint -t stylish -c tslint.json '{lib,test,test-e2e}/**/*.ts' 'karma.conf.ts'",
     "lint-fix": "tslint --fix -t stylish -c tslint.json '{lib,test,test-e2e}/**/*.ts' 'karma.conf.ts'",
     "prebuild": "npm run prettify && npm run lint-fix",
-    "precommit": "lint-staged",
     "prettify": "prettier --write \"lib/**/*.ts\" \"test/**/*.ts\" \"test-e2e/**/*.ts\" \"karma.conf.ts\"",
     "build:umd": "rollup -c rollup.config.umd.js",
     "build:es6": "rollup -c rollup.config.es6.js",
@@ -40,9 +44,9 @@
     "@resin.io/types-mochainon": "^2.0.1",
     "@types/mocha": "^5.0.0",
     "@types/node": "^9.6.0",
-    "husky": "^0.14.3",
+    "husky": "^4.2.5",
     "karma": "^3.0.0",
-    "lint-staged": "^7.0.0",
+    "lint-staged": "^10.1.7",
     "localforage": "^1.5.0",
     "mocha": "^3.5.3",
     "mochainon": "^2.0.0",
@@ -61,17 +65,5 @@
   },
   "peerDependencies": {
     "localforage": "^1.5.0"
-  },
-  "lint-staged": {
-    "{lib,tests}/**/*.ts": [
-      "prettier --write",
-      "tslint -t stylish --fix",
-      "git add"
-    ],
-    "karma.conf.ts": [
-      "prettier --write",
-      "tslint -t stylish --fix",
-      "git add"
-    ]
   }
 }
