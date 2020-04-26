@@ -6,6 +6,11 @@
   "main": "dist/localforage-sessionstoragewrapper.js",
   "jsnext:main": "dist/localforage-sessionstoragewrapper.es6.js",
   "typings": "typings/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "typings"
+  ],
   "scripts": {
     "clean": "rimraf build && rimraf dist",
     "lint": "tslint -t stylish -c tslint.json '{lib,test,test-e2e}/**/*.ts' 'karma.conf.ts'",
