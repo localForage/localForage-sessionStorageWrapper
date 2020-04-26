@@ -11,7 +11,6 @@
     "lint": "tslint -t stylish -c tslint.json '{lib,test,test-e2e}/**/*.ts' 'karma.conf.ts'",
     "lint-fix": "tslint --fix -t stylish -c tslint.json '{lib,test,test-e2e}/**/*.ts' 'karma.conf.ts'",
     "prebuild": "npm run prettify && npm run lint-fix",
-    "precommit": "lint-staged",
     "prettify": "prettier --write \"lib/**/*.ts\" \"test/**/*.ts\" \"test-e2e/**/*.ts\" \"karma.conf.ts\"",
     "build:umd": "rollup -c rollup.config.umd.js",
     "build:es6": "rollup -c rollup.config.es6.js",
@@ -61,17 +60,5 @@
   },
   "peerDependencies": {
     "localforage": "^1.5.0"
-  },
-  "lint-staged": {
-    "{lib,tests}/**/*.ts": [
-      "prettier --write",
-      "tslint -t stylish --fix",
-      "git add"
-    ],
-    "karma.conf.ts": [
-      "prettier --write",
-      "tslint -t stylish --fix",
-      "git add"
-    ]
   }
 }

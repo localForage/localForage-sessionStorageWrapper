@@ -1,0 +1,12 @@
+{
+	"{lib,tests}/**/*.ts": [
+		"prettier --write",
+		"tslint -t stylish --fix",
+		"git add"
+	],
+	"karma.conf.ts": [
+		"prettier --write",
+		"tslint -t stylish --fix",
+		"git add"
+	]
+}
