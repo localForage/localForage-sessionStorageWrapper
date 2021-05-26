@@ -36,7 +36,7 @@
     "sessionstorage"
   ],
   "author": "Thodoris Greasidis",
-  "licence": "Apache-2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "http://github.com/thgreasi/localForage-sessionStorageWrapper/issues"
   },
